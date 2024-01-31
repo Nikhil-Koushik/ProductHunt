@@ -1,4 +1,5 @@
 $('.nav-item').hover(function(event){
+  console.log(event.target.id);
   $('#'+event.target.id).css('color','red');
   $('.'+event.target.name).css('visibility','visible');
   $('.'+event.target.name).hover(function(){},function(){

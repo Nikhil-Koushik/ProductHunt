@@ -14,8 +14,8 @@ use App\Http\Controllers\CategoriesController;
 |
 */
 Route::get('/', [HomeController::class, 'dashboard']);
-Route::get('/categories/work', [CategoriesController::class, 'work'])->name('work');
-Route::get('/categories/engineering', [CategoriesController::class, 'engg'])->name('engg');
-Route::get('/categories/design', [CategoriesController::class, 'design'])->name('design');
-Route::get('/categories/social', [CategoriesController::class, 'social'])->name('social');
-Route::get('/categories/finance', [CategoriesController::class, 'finance'])->name('finance');
+Route::get('/categories/work', [CategoriesController::class, 'work'])->name('Work & Productivity');
+Route::get('/categories/engineering', [CategoriesController::class, 'engg'])->name('Engineering & Development');
+Route::get('/categories/design', [CategoriesController::class, 'design'])->name('Design & Creative');
+Route::get('/categories/social', [CategoriesController::class, 'social'])->name('Social and Community');
+Route::get('/categories/finance', [CategoriesController::class, 'finance'])->name('Finance');

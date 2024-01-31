@@ -94,22 +94,22 @@
       <div class="appdata">
           <div class="row app-title">
             <div class="col col-md-1" style="padding-left: 0px;">
-              <img class="appimg" src="{{$item->logo}}" alt="">
+              <img class="appimg" src="{{$item['logo']}}" alt="">
             </div>
             <div class="col col-md-10 appname">
               <div class="row">
                 <div class="col">
-                  <a href="" style="text-decoration: none;"><h5>{{$item->name}}</h5></a>
+                  <a href="" style="text-decoration: none;"><h5>{{$item['name']}}</h5></a>
                 </div>
               </div>
               <div class="row" style="display: inline-block">
                 <div style="display:inline">⭐⭐⭐⭐⭐</div>
-                <div style="display:inline;color:gray">{{$item->review_count}} reviews</div>
+                <div style="display:inline;color:gray">{{$item['review_count']}} reviews</div>
               </div>
             </div>
           </div>
           <div class="row app-desc">
-            {{$item->description}}
+            {{$item['description']}}
           </div>
         </div>
         @endforeach
@@ -147,7 +147,7 @@
           <div class="row" style="color: gray; font-weight:bold;">{{strtoupper($heading)}}</div>
           <div class="rightitems">
             @foreach($services as $item)
-              <div class="row">{{$item->services}} </div>
+              <div class="row">{{$item}} </div>
             @endforeach
           </div>
         </div>

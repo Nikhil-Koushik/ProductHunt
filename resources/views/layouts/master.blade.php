@@ -26,62 +26,21 @@
               <input class="form-control" type="search" placeholder="🔍︎ Search ( ctrl + k )" aria-label="Search">
             </form>
             <ul class="navbar-nav">
-              <!-- @foreach($items as $x)
+              @foreach($items as $list)
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="{{$x['title']}}Container" id="{{$x['title']}}Container">{{$x['title']}}</a>
-                @foreach($x['items'] as $item)
-                <div class="navcont {{$x['title']}}Container">
-                  <div class="{{$x['title']}}Float">
-                    <div class="catholder" id="ca1"><a href="{{ route('work') }}"  class="catitem">{{$item}}</a></div>
+                <a class="nav-link " aria-current="page" href="" name="{{$list['title']}}Container" id="{{$list['title']}}Container">{{$list['title']}}</a>
+                @if(sizeof($list['items'])>0)
+                <div class="navcont NavContainer {{$list['title']}}Container">
+                  <div class="{{$list['title']}}Float NavFloat">
+                    @foreach($list['items'] as $item)
+                    <div class="catholder" id="ca{{$var++}}"><a href="{{ route($heading) }}"  class="catitem">{{$item}}</a></div>
+                    @endforeach
                   </div>
                 </div>
-                @endforeach
+                @endif
               </li> 
-              @endforeach -->
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="Community" id="Community">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="categoriesContainer" id="categoriesContainer">Categories</a>
-                <div class="navcont categoriesContainer">
-                  <div class="CategoriesFloat">
-                    <div class="catholder" id="ca1" ><a href="{{ route('work') }}"  class="catitem">Work & Productivity</a></div>
-                    <div class="catholder" id="ca2" ><a href="{{ route('engg') }}"  class="catitem">Engineering & Development</a></div>
-                    <div class="catholder" id="ca3" ><a href="{{ route('design') }}"  class="catitem">Design & Creative</a></div>
-                    <div class="catholder" id="ca4" ><a href="{{ route('social') }}"  class="catitem">Social and Community</a></div>
-                    <div class="catholder" id="ca5" ><a href="{{ route('finance') }}"  class="catitem">Finance</a></div>
-                    <div class="catholder" id="ca6" ><a href="{{ route('finance') }}"  class="catitem">Marketing and Sales</a></div>
-                    <div class="catholder" id="ca7" ><a href="{{ route('finance') }}"  class="catitem">Travel</a></div>
-                    <div class="catholder" id="ca8" ><a href="{{ route('finance') }}"  class="catitem">Health & Fitness</a></div>
-                    <div class="catholder" id="ca9" ><a href="{{ route('finance') }}"  class="catitem">Platfroms</a></div>
-                    <div class="catholder" id="ca10"><a href="{{ route('finance') }}"  class="catitem">Product add-ons</a></div>
-                    <div class="catholder" id="ca11"><a href="{{ route('finance') }}"  class="catitem">Web3</a></div>
-                    <div class="catholder" id="ca12"><a href="{{ route('finance') }}"  class="catitem">Physical Products</a></div>
-                    <div class="catholder" id="ca13"><a href="{{ route('finance') }}"  class="catitem">AI</a></div>
-                    <div class="catholder" id="ca14"><a href="{{ route('finance') }}"  class="catitem">Ecommerce</a></div>
-                    <div class="catholder" id="ca15"><a href="{{ route('finance') }}"  class="catitem">Family</a></div>
-                    <div class="catholder" id="ca16"><a href="{{ route('finance') }}"  class="catitem">Lifestyle</a></div>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="Community" id="Community">Community</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="Marketplace" id="Marketplace">Marketplace</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="Advertise" id="Advertise">Advertise</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#" name="About" id="About">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-danger" aria-current="page" href="#">How to post?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Sign in</a>
-              </li>
+              @endforeach
+              
               <button class="btn btn-danger">Sign up</button>
             </ul>
           </div>
